@@ -1,6 +1,10 @@
 
 import './App.css';
 import Form from './components/Form';
+import MyNavbar from './components/MyNavbar';
+import { BrowserRouter as Router , Route ,Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 const App = () => {
 
@@ -25,10 +29,22 @@ const App = () => {
   };
 
   return (
+
     <div className="App">
-    <h1>app is working</h1>
-    <Form onSubmit={handleFormSubmit} />
+    <Router>
+    <div>
+      <MyNavbar />
+      <Switch>
+        <Route path="/" exact component={Home}/>
+        <Route path="/login" component={Login} />
+      </Switch>
     </div>
+    
+  </Router>
+  <h1>app is working</h1>
+    <Form onSubmit={handleFormSubmit} />
+  </div>
+
   );
 }
 

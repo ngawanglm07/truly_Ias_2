@@ -2,7 +2,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import connectDB from './db.js';  // Assuming db.js is in the same directory as server.js
+import connectDB from './database/db.js';  // Assuming db.js is in the same directory as server.js
 import FormModel from './models/FormModel.js'; // Assuming models directory is in the same directory as server.js
 const app = express();
 const port = 3001;
