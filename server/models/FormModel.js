@@ -7,4 +7,4 @@ const formSchema = new mongoose.Schema({
 
 const FormModel = mongoose.model('Form', formSchema);
 
-module.exports = FormModel;
+export default FormModel;
